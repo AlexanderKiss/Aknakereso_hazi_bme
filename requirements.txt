@@ -1,0 +1,10 @@
+# Ebben a projektben csak a Python beépített könyvtárait használjuk (tkinter, random, os).
+# Így a program platformfüggetlen marad.
+# Aknakereső Projekt (Python)
+#1  A program nem állhat egy forrásfájlból, a modul kezelés használata kötelező.
+#2  A program (általában) funkcionálisan helyes. (Ez bizonyos esetekben, például hibák, váratlan bemenetek vagy ritka esetekben nem elvárás, de alapvetően a programnak "működnie" kell.)
+#3  Kötelező függvények használata.
+#4  Kötelező fájlhasználatot bemutatni.
+#5  Szintaktikai helyesség Python 3.12. verzióval.
+#6  Program platformfüggetlen telepíthetősége. (Kötelező requirements.txt fájl használata (akár üres esetben is))
+#7  Használati útmutató kötelező. (README.md fájl)

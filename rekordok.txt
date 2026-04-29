@@ -1,0 +1,5 @@
+Kicsi (9x9) - Kezdő ;Klasszikus;Alex;142
+Kicsi (9x9) - Kezdő ;Limitált;Alex;112
+Kicsi (9x9) - Kezdő ;Klasszikus;Alex;121
+Kicsi (9x9) - Kezdő ;Klasszikus;Viki;355
+Közepes (16x16) - Haladó;Klasszikus;anya;456
