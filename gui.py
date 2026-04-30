@@ -83,17 +83,22 @@ class AknakeresoGUI:
             self.felfed_rekurziv(r, c)
             self.gyozelem_ellenorzese()
 
-    def felfed_rekurziv(self, r, c):
-        """Rekurzív területfelfedés, ami csak 1 kattintásnak számít[cite: 18]."""
+     def felfed_rekurziv(self, r, c):
+        """Rekurzív területfelfedés, ami csak 1 kattintásnak számít."""
         if (r, c) in self.felfedett_mezok or (r, c) in self.zaszlok:
             return
         
         self.felfedett_mezok.add((r, c))
         ertek = self.jatek.tabla[r][c]
         
+        # Klasszikus aknakereső színek a számokhoz
+        szinek = {1: "blue", 2: "green", 3: "red", 4: "purple", 5: "maroon", 6: "turquoise", 7: "black", 8: "gray"}
+        
         color = "lightgrey" if ertek == 0 else "white"
         szoveg = str(ertek) if ertek > 0 else ""
-        self.gombok[(r, c)].config(text=szoveg, bg=color, relief=tk.SUNKEN)
+        betuszin = szinek.get(ertek, "black")
+        
+        self.gombok[(r, c)].config(text=szoveg, bg=color, fg=betuszin, relief=tk.SUNKEN)
 
         if ertek == 0:
             for dr in [-1, 0, 1]:
