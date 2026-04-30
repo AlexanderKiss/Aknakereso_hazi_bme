@@ -77,7 +77,8 @@ class AknakeresoGUI:
 
         ertek = self.jatek.tabla[r][c]
         if ertek == -1:
-            self.gombok[(r, c)].config(text="💣", bg="red")
+            # Itt adjuk hozzá az fg="black" részt!
+            self.gombok[(r, c)].config(text="💣", bg="red", fg="black")
             self.jatek_vege(False, "Aknára léptél!")
         else:
             self.felfed_rekurziv(r, c)
@@ -113,7 +114,7 @@ class AknakeresoGUI:
             return
         if (r, c) in self.zaszlok:
             self.zaszlok.remove((r, c))
-            self.gombok[(r, c)].config(text="", bg="SystemButtonFace")
+            self.gombok[(r, c)].config(text="", bg="SystemButtonFace", fg="black")
         else:
             self.zaszlok.add((r, c))
             self.gombok[(r, c)].config(text="🚩", fg="red")
