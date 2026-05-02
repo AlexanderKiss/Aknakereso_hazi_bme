@@ -5,7 +5,7 @@ import time
 import storage
 
 class AknakeresoGUI:
-    """A játék grafikus felületéért és az eseménykezelésért felelős osztály[cite: 40]."""
+    """A játék grafikus felületéért és az eseménykezelésért felelős osztály."""
     
     def __init__(self, root, sorok=10, oszlopok=10, aknak=10, kattintas_limit=None, kategoria="Normál", nev="Játékos", on_close=None):
         self.root = root
@@ -41,7 +41,7 @@ class AknakeresoGUI:
         self.palyat_epit()
 
     def palyat_epit(self):
-        """Létrehozza a gombokat a rácson[cite: 59]."""
+        """Létrehozza a gombokat a rácson."""
         for r in range(self.jatek.sorok):
             for c in range(self.jatek.oszlopok):
                 btn = tk.Button(self.jatek_ter, width=2, height=1, 
@@ -77,7 +77,6 @@ class AknakeresoGUI:
 
         ertek = self.jatek.tabla[r][c]
         if ertek == -1:
-            # Itt adjuk hozzá az fg="black" részt!
             self.gombok[(r, c)].config(text="💣", bg="red", fg="black")
             self.jatek_vege(False, "Aknára léptél!")
         else:
@@ -109,7 +108,7 @@ class AknakeresoGUI:
                         self.felfed_rekurziv(nr, nc)
 
     def jobb_kattintas(self, r, c):
-        """Zászló elhelyezése jobb klikkel[cite: 59]."""
+        """Zászló elhelyezése jobb klikkel."""
         if (r, c) in self.felfedett_mezok:
             return
         if (r, c) in self.zaszlok:
@@ -123,7 +122,7 @@ class AknakeresoGUI:
             self.gyozelem_ellenorzese()
 
     def gyozelem_ellenorzese(self):
-        """Ellenőrzi a győzelmi feltételeket mindkét módhoz[cite: 66]."""
+        """Ellenőrzi a győzelmi feltételeket mindkét módhoz."""
         osszes_mezo = self.jatek.sorok * self.jatek.oszlopok
         biztonsagos_db = osszes_mezo - self.jatek.aknak_szama
         
