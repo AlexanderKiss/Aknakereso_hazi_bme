@@ -7,7 +7,7 @@ class BeallitoMenu:
     def __init__(self, root):
         self.root = root
         self.root.title("Aknakereső - Főmenü")
-        self.root.geometry("320x500") # Kicsit magasabb ablak, hogy minden elférjen
+        self.root.geometry("320x500")
         
         # Bemeneti változók
         self.nev_var = tk.StringVar(value="Játékos")
@@ -103,10 +103,10 @@ class BeallitoMenu:
 
         kategoria = f"{meret_szoveg} - {nehezseg_szoveg[:6]}"
 
-        # Menü elrejtése a bezárás helyett
+        # Menü elrejtése
         self.root.withdraw()
         
-        # Játék ablak megnyitása (Toplevel = a főablak "gyermeke")
+        # Játék ablak megnyitása
         jatek_ablak = tk.Toplevel(self.root)
         
         # Átadjuk a deiconify-t, hogy a játék végén újra megjelenjen a menü
